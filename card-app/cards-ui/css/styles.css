@@ -1,0 +1,163 @@
+:root {
+  --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+}
+
+/* General Layout */
+body {
+  font-family: var(--font-family);
+  background: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 90%;
+  margin: 2em auto;
+  background: #fff;
+  padding: 2em;
+  border-radius: 1em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+h2 {
+  font-family: cursive;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Buttons */
+button {
+  border: none;
+  padding: 0.6em 1.2em;
+  margin: 0.5em 0.3em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Button Variants */
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+}
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+}
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Form Styling */
+#cardFormContainer {
+  margin-top: 1.5em;
+  padding: 1.5em;
+  border: 1px solid #ddd;
+  border-radius: 0.75em;
+  background-color: #f9f9f9;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+form input {
+  flex: 1 1 min(300px, 100%);
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  font-size: 1em;
+}
+
+form button {
+  flex: 1 1 100%;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  border-collapse: collapse;
+  margin-top: 1.5em;
+  font-size: 0.95em;
+}
+
+table th,
+table td {
+  border: 1px solid #ddd;
+  padding: 0.75em;
+  text-align: center;
+}
+
+table th {
+  background-color: #f1f1f1;
+}
+
+table td button {
+  margin: 0 0.25em;
+  padding: 0.4em 0.8em;
+  font-size: 0.9em;
+}
+
+table input {
+  width: 100%;
+  padding: 0.5em;
+  box-sizing: border-box;
+}
+
+/* Highlighted Row */
+.editing {
+  background-color: #fff3cd !important;
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  form input {
+    flex: 1 1 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+}

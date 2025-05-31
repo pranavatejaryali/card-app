@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Soulfire</h2>
+
+      <h3>SIGN-IN OR SIGN-UP HERE</h3>
+
+      <form id="loginForm">
+        <div>
+          <input type="email" id="email" placeholder="Email" required />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button name="action" value="login" class="btn-success" type="submit">
+            Login
+          </button>
+          <button
+            name="action"
+            value="register"
+            class="btn-primary"
+            type="submit"
+          >
+            Register
+          </button>
+        </div>
+      </form>
+      <p><em>* This application is made using ai to test</em></p>
+    </div>
+    <script src="scripts/auth.js"></script>
+  </body>
+</html>

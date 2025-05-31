@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Soulfire</h2>
+
+      <button class="btn-danger" onclick="logout()">Logout</button>
+      <button class="btn-success" onclick="toggleForm()">Add Card</button>
+      <button class="btn-primary" onclick="fetchCards()">Refresh Table</button>
+
+      <div id="cardFormContainer" style="display: none">
+        <form id="cardForm">
+          <input type="text" name="cardName" placeholder="Card Name" required />
+          <input
+            type="text"
+            name="last4Digits"
+            placeholder="Last 4 Digits"
+            required
+          />
+          <input type="date" name="statementDate" required />
+          <input type="date" name="dueDate" required />
+          <input
+            type="number"
+            name="dueAmount"
+            placeholder="Due Amount"
+            required
+          />
+          <input
+            type="number"
+            name="minimumDue"
+            placeholder="Minimum Due"
+            required
+          />
+          <input
+            type="number"
+            name="totalLimit"
+            placeholder="Total Limit"
+            required
+          />
+          <input
+            type="number"
+            name="outstandingBalance"
+            placeholder="Outstanding Balance"
+            required
+          />
+          <input
+            type="number"
+            name="availableLimit"
+            placeholder="Available Limit"
+            required
+          />
+          <input type="text" name="category" placeholder="Category" />
+          <button class="btn-success" type="submit">Save Card</button>
+        </form>
+      </div>
+
+      <h3>YOUR CARDS</h3>
+
+      <table id="cardTable">
+        <thead>
+          <tr>
+            <th>Card Name</th>
+            <th>Last 4</th>
+            <th>Statement Date</th>
+            <th>Due Date</th>
+            <th>Due Amount</th>
+            <th>Minimum Due</th>
+            <th>Total Limit</th>
+            <th>Outstanding</th>
+            <th>Available</th>
+            <th>Category</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="scripts/dashboard.js"></script>
+  </body>
+</html>
